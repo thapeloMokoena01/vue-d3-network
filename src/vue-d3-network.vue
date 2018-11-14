@@ -260,7 +260,6 @@ export default {
         link.source = link.sid
         link.target = link.tid
         if (!link.id) vm.$set(link, 'id', 'link-' + index)
-        console.log('---- link', link)
         return link
       })
     },
