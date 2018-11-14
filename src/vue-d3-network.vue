@@ -253,13 +253,14 @@ export default {
       let vm = this
       return links.concat().map((link, index) => {
         // link label startOffSet
-        if (!link.startOffSet) link.startOffSet = '50%'
+        if (!link.startOffSet) link.startOffSet = '30%'
         // link formatter option
         link = this.itemCb(this.linkCb, link)
         // source and target for d3
         link.source = link.sid
         link.target = link.tid
         if (!link.id) vm.$set(link, 'id', 'link-' + index)
+        console.log('---- link', link)
         return link
       })
     },
