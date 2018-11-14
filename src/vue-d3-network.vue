@@ -252,6 +252,8 @@ export default {
     buildLinks (links) {
       let vm = this
       return links.concat().map((link, index) => {
+        // link label startOffSet
+        if (!link.startOffSet) link.startOffSet = '50%'
         // link formatter option
         link = this.itemCb(this.linkCb, link)
         // source and target for d3
